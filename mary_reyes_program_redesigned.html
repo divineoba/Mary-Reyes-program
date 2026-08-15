@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mary Reyes Program — community support, opportunity and charitable assistance.">
+<title>Mary Reyes Program | Community Support</title>
+<style>
+:root{
+  --navy:#0d1b2a;
+  --navy2:#14283d;
+  --gold:#c7a65a;
+  --cream:#f7f4ed;
+  --white:#ffffff;
+  --muted:#697586;
+  --line:#e6e8eb;
+  --soft:#f3f5f7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:var(--white);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:auto}
+.topbar{background:var(--navy);color:#fff;font-size:13px;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:20px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:43px;height:43px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:20px}
+.brand strong{display:block;color:var(--navy);font-family:Georgia,serif;font-size:19px}
+.brand span{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600}
+nav a:hover{color:#9a7a34}
+.nav-button{background:var(--navy);color:#fff!important;padding:11px 18px;border-radius:6px}
+.hero{background:linear-gradient(110deg,rgba(13,27,42,.97),rgba(20,40,61,.88)),url('') center/cover;min-height:570px;color:#fff;display:flex;align-items:center}
+.hero-content{max-width:760px;padding:85px 0}
+.kicker{color:#d9bd79;font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font:400 clamp(42px,6vw,72px)/1.08 Georgia,serif;margin-bottom:24px}
+.hero p{font-size:18px;color:#e4e8ec;max-width:680px;margin-bottom:32px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:6px;font-weight:bold;font-size:14px}
+.btn-gold{background:var(--gold);color:#111}
+.btn-light{border:1px solid rgba(255,255,255,.45);color:#fff}
+section{padding:82px 0}
+.section-head{max-width:700px;margin-bottom:42px}
+.section-head .eyebrow{color:#9a7a34;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:bold;margin-bottom:10px}
+.section-head h2{font:400 39px/1.2 Georgia,serif;color:var(--navy);margin-bottom:14px}
+.section-head p{color:var(--muted)}
+.intro{background:var(--cream)}
+.intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.intro h2{font:400 42px/1.2 Georgia,serif;color:var(--navy);margin-bottom:20px}
+.intro p{color:#566170;margin-bottom:16px}
+.info-box{background:#fff;border:1px solid #e3dfd2;border-radius:10px;padding:30px;box-shadow:0 12px 35px rgba(13,27,42,.07)}
+.info-box h3{font:400 25px Georgia,serif;color:var(--navy);margin-bottom:14px}
+.info-box p{font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:9px;padding:30px;background:#fff}
+.icon{width:45px;height:45px;border-radius:50%;background:#f1ead9;color:#9a7a34;display:grid;place-items:center;font-weight:bold;margin-bottom:20px}
+.card h3{font:400 23px Georgia,serif;color:var(--navy);margin-bottom:10px}
+.card p{font-size:14px;color:var(--muted)}
+.impact{background:var(--navy);color:#fff}
+.impact .section-head h2{color:#fff}
+.impact .section-head p{color:#cbd4dc}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.stat{border-top:1px solid rgba(255,255,255,.25);padding-top:20px}
+.stat strong{font:400 38px Georgia,serif;color:#d9bd79;display:block}
+.stat span{font-size:13px;color:#d4dbe1}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{padding:28px;background:var(--soft);border-radius:9px}
+.step-number{color:#9a7a34;font-weight:bold;font-size:13px;letter-spacing:2px}
+.step h3{font:400 23px Georgia,serif;color:var(--navy);margin:8px 0}
+.step p{font-size:14px;color:var(--muted)}
+.notice{background:#fff8e9;border-left:4px solid var(--gold);padding:20px 22px;font-size:14px;color:#5d543f}
+.cta{background:linear-gradient(120deg,#f5f1e7,#fff);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta h2{font:400 34px Georgia,serif;color:var(--navy);margin-bottom:8px}
+.cta p{color:var(--muted)}
+footer{background:#09131e;color:#b9c2cb;padding:48px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:50px}
+footer h3{color:#fff;font:400 20px Georgia,serif;margin-bottom:15px}
+footer p,footer li{font-size:13px;color:#aeb8c1}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:20px;font-size:12px;color:#83909c}
+@media(max-width:800px){
+  .topbar .container{display:block;text-align:center}
+  nav{display:none}
+  .hero{min-height:500px}
+  .intro-grid,.cards,.steps,.stats,.footer-grid{grid-template-columns:1fr}
+  .intro-grid{gap:30px}
+  .cta-box{display:block}
+  .cta-box .btn{margin-top:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>Community assistance and opportunity for eligible participants</span>
+    <span>Official program information</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <div class="brand-mark">MR</div>
+      <div>
+        <strong>Mary Reyes Program</strong>
+        <span>Community Support Initiative</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#impact">Our Impact</a>
+      <a href="#process">How It Works</a>
+      <a class="nav-button" href="#apply">Apply for Assistance</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="kicker">Mary Reyes Program</div>
+      <h1>Creating opportunities for individuals and families to move forward.</h1>
+      <p>The Mary Reyes Program is presented as a community-focused assistance initiative designed to connect eligible people with charitable support, useful resources and opportunities for a stronger future.</p>
+      <div class="buttons">
+        <a class="btn btn-gold" href="#apply">Begin an Application</a>
+        <a class="btn btn-light" href="#about">Learn About the Program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <div class="container intro-grid">
+    <div>
+      <div class="kicker">About the Program</div>
+      <h2>Support built around people, dignity and opportunity.</h2>
+      <p>The Mary Reyes Program is designed to provide a clear and accessible pathway for people seeking charitable assistance. The program can support approved initiatives through carefully reviewed applications and responsible distribution of available resources.</p>
+      <p>Our goal is to make the process straightforward, transparent and respectful while helping eligible participants understand the opportunities available to them.</p>
+    </div>
+    <div class="info-box">
+      <h3>A broader community vision</h3>
+      <p>The program may collaborate with independently verified charitable organizations, community groups and partners in different countries where appropriate. Any partnership, sponsorship or institutional relationship should be published only with accurate authorization and supporting documentation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Provide</div>
+      <h2>Programs designed to make assistance easier to access.</h2>
+      <p>Participants can use the platform to learn about available opportunities, review eligibility requirements and submit information for consideration.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">01</div>
+        <h3>Financial Assistance</h3>
+        <p>Eligible applicants may be considered for available charitable assistance according to the requirements and resources of a particular program.</p>
+      </article>
+      <article class="card">
+        <div class="icon">02</div>
+        <h3>Community Support</h3>
+        <p>We highlight practical support initiatives that can help individuals and families access useful resources and opportunities.</p>
+      </article>
+      <article class="card">
+        <div class="icon">03</div>
+        <h3>Opportunity Programs</h3>
+        <p>Selected initiatives can focus on education, personal development, community projects and other constructive opportunities.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="impact" id="impact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Commitment</div>
+      <h2>Responsible assistance with a focus on measurable community impact.</h2>
+      <p>Program statistics should be populated only with verified figures and documented outcomes.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>01</strong><span>Clear application pathway</span></div>
+      <div class="stat"><strong>02</strong><span>Participant review process</span></div>
+      <div class="stat"><strong>03</strong><span>Transparent program updates</span></div>
+      <div class="stat"><strong>04</strong><span>Community-centered support</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>A simple process from registration to review.</h2>
+      <p>Applications are subject to the eligibility requirements and review procedures of the specific assistance program.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-number">STEP 01</span><h3>Create Your Profile</h3><p>Register with your basic information so that you can access the participant area and application forms.</p></div>
+      <div class="step"><span class="step-number">STEP 02</span><h3>Submit an Application</h3><p>Complete the relevant application and provide accurate information required for consideration.</p></div>
+      <div class="step"><span class="step-number">STEP 03</span><h3>Follow Your Status</h3><p>Use your participant dashboard to view updates, requests for information and the current status of your application.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="notice">
+      <strong>Important information:</strong> The Mary Reyes Program should publish only verified claims about its history, beneficiaries, funding, partnerships and institutional relationships. No government endorsement, government funding or official affiliation should be represented unless it has been formally confirmed and documented.
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="apply">
+  <div class="container cta-box">
+    <div>
+      <h2>Ready to explore the program?</h2>
+      <p>Start by reviewing the eligibility information and preparing your application details.</p>
+    </div>
+    <a class="btn nav-button" href="#">Participant Registration</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Mary Reyes Program</h3>
+        <p>A community-focused platform for presenting charitable assistance opportunities and participant information.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#about">About the Program</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#impact">Our Impact</a></li>
+          <li><a href="#process">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Participant Area</h3>
+        <ul>
+          <li><a href="#apply">Registration</a></li>
+          <li><a href="#apply">Application</a></li>
+          <li><a href="#apply">Application Status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Mary Reyes Program. All rights reserved. Program information should be verified before publication.</div>
+  </div>
+</footer>
+
+</body>
+</html>
